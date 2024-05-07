@@ -1,11 +1,11 @@
 {
-  "name": "nj---project-kennel-b7web",
+  "name": "nj-petshop-b7web",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon -r ts,json,mustache src/server.ts"
+    "dev": "nodemon -e ts,json,mustache src/server.ts"
   },
   "keywords": [],
   "author": "",
