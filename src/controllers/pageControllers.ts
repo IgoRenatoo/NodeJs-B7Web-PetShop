@@ -1,14 +1,34 @@
-import { Request, Response } from "express";
+import { Request, Response } from 'express';
 
 export const home =  (req: Request, res: Response) => {
-  res.render('pages/home')
-}
+  res.render('pages/home', {
+    banner: {
+      title: 'Todos os animais',
+      url: '/images/allanimals.jpg'
+    }
+  })  
+};
 export const dog =  (req: Request, res: Response) => {
-  res.render('pages/dog')
+  res.render('pages/dog', {    
+    banner: {
+      title: 'Cachorro',
+      url: '/images/banner_dog.jpg'      
+     }
+  })
 }
 export const cat =  (req: Request, res: Response) => {
-  res.render('pages/cat')
+  res.render('pages/cat' ,{
+    banner: {
+     title: 'Gatos',
+     url: '/images/banner_cat.jpg'      
+     }
+  })
 }
 export const fish =  (req: Request, res: Response) => {
-  res.render('pages/fish')
+  res.render('pages/fish' ,{
+    banner: {
+     title: 'Peixes',
+     url: '/images/banner_fish.jpg'      
+     }
+  })
 }
