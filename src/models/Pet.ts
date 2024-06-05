@@ -7,6 +7,7 @@ type InfoPet = {
   color: string,
   sex: SexType
 }
+//Banco de dados fake para implementação do projeto...
 const dbPet: InfoPet[] = [
   {
       type: 'dog',
