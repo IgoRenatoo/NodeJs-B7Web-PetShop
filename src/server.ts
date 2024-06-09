@@ -4,6 +4,7 @@ import mustache from 'mustache-express';
 import dotenv from 'dotenv';
 import path from 'path';
 import MainRouters from './routes/routes';
+import { notFoundRequest, errorHandler } from './routes/errorHandler';
 
 const server = express();
 dotenv.config();
@@ -20,8 +21,10 @@ server.use(express.static(path.join(__dirname, '../public')));
 server.use(urlencoded({ extended: true }));
 // Usar roteadores definidos em MainRouters
 server.use(MainRouters);
+server.use(notFoundRequest);
+server.use(errorHandler);
 
-server.get('/ping', (req: Request, res: Response) => {
+server.get('/ping', (req: Request, res: Response) => { 
   res.json({pong: true})
 })
 
